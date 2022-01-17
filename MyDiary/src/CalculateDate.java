@@ -3,16 +3,16 @@ import java.time.LocalDate;
 import java.time.YearMonth;
 
 public class CalculateDate {
-	LocalDate now = LocalDate.now();
-	YearMonth yearMonth;
-	LocalDate endOfMonth;
+	private LocalDate now = LocalDate.now();
+	private YearMonth yearMonth;
+	private LocalDate endOfMonth;
 
 	public CalculateDate() {
 		this.yearMonth = YearMonth.from(this.now);
 		this.endOfMonth = this.yearMonth.atEndOfMonth();
 	}
 
-	int getSumOfDays() {
+	public int getSumOfDays() {
 		return this.endOfMonth.getDayOfMonth();
 	}
 
@@ -23,15 +23,15 @@ public class CalculateDate {
 		return dayNumber;
 	}
 
-	int getYear() {
+	public int getYear() {
 		return this.now.getYear();
 	}
 
-	int getMonth() {
+	public int getMonth() {
 		return this.now.getMonthValue();
 	}
 
-	void draw() {
+	public void draw() {
 		System.out.println("\t\t    " + this.getYear() + "년 " + this.getMonth() + "월\n");
 		System.out.println("일\t월\t화\t수\t목\t금\t토");
 		int nextWeek = 0;
