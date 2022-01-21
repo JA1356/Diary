@@ -32,6 +32,7 @@ public class CalendarSwing extends JFrame implements ItemListener, ActionListene
 														//borderLayout : 상하좌우 가운데로 나뉘어서 layout을 잡는것
 	JPanel titlePane = new JPanel(new GridLayout(1, 7));// 타이틀을 생성시킬 패널을 생성하고 GridLayout으로 잡아준다.
 															// GridLayout: 지정된 수의 행과 열을 생성하는 레이아웃이다 1행 7열이므로 일,월,화,수,목,금,토 가 들어가게된다.
+	
 	String[] title = {"일", "월", "화", "수", "목", "금", "토"};
 	JPanel dayPane = new JPanel(new GridLayout(0, 7)); // 위와 동일하며 날짜가 나오게 된다. 
 	
@@ -47,7 +48,7 @@ public class CalendarSwing extends JFrame implements ItemListener, ActionListene
 		month = date.get(Calendar.MONTH)+1; //월을 받아와서 month에 대입한다. +1을 하는 이유는 0~11이라
 		
 		//상단
-		selectPane.setBackground(new Color(150, 200, 200)); //백그라운드의 배경을 주입한다.
+		selectPane.setBackground(new Color(150, 180, 200)); //백그라운드의 배경을 주입한다.
 		selectPane.add(prevBtn); prevBtn.setFont(fnt);  
 		selectPane.add(yearCombo); yearCombo.setFont(fnt);
 		selectPane.add(yearLBl); yearLBl.setFont(fnt);
@@ -68,6 +69,7 @@ public class CalendarSwing extends JFrame implements ItemListener, ActionListene
 		add(centerPane);
 		
 		//날짜만들기
+		
 		centerPane.add(dayPane); //센터패널에 날짜패널을 추가한다.
 		setDay();	//setDay()메소드를 호출한다.
 		
