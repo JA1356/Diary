@@ -4,13 +4,14 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.Icon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class TestProject extends JFrame implements ActionListener{
 	
-	static int[] arr = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31};
+	static String[] arr = {"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"};
 	
 	static JButton[] btn = new JButton[arr.length];
 	
@@ -38,7 +39,7 @@ public class TestProject extends JFrame implements ActionListener{
 		grid_panel.setLayout(new GridLayout(4, 4, 0, 0)); //테이블 형식 - 행, 열, 가로 여백, 세로 여백	
 		
 		for(int idx=0; idx<arr.length; idx++) {
-			btn[idx] = new JButton();
+			btn[idx] = new JButton(arr[idx]);
 			btn[idx].setFont(new Font("맑은 고딕", 0, 20)); //TODO 폰트 정의
 			btn[idx].setBackground(Color.GRAY); //TODO 백그라운드 색상 정의
 			btn[idx].setForeground(Color.WHITE); //TODO 텍스트 색상 정의
